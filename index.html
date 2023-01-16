@@ -18,6 +18,10 @@
     <header class="header">
       <div class="container header-container">
         <a href="./index.html" class="logo"><span>Web</span>Studio</a>
+        <button type="button" class="mobile-menu-open js-open-menu" aria-expanded="false"
+          aria-controls="mobile-menu"><svg class="menu-burger-icon">
+          <use href="./images/symbol-defs.svg#icon-charm_menu-hamburger"></use>
+        </svg></button>
         <nav class="navigation">
           <ul class="navigation-list">
             <li><a href="./index.html" class="navigation-link current-page">Studio</a></li>
@@ -39,6 +43,41 @@
             >
           </li>
         </ul>
+      </div>
+      <div class="mobile-menu js-menu-container">
+        <div class="container mobile-menu-container">
+          <button  type="button" class="modal-burger-button js-close-menu">
+        <svg class="modal-burger-icon">
+        <use href="./images/symbol-defs.svg#icon-close"></use>
+      </svg>
+    </button>
+    <ul class="mobile-menu-nav">
+            <li class="mobile-menu-navigation-item">
+              <a href="./index.html" class="mobile-menu-navigation-link current-page">Studio</a>
+            </li>
+            <li class="mobile-menu-navigation-item">
+              <a href="./portfolio.html" class="mobile-menu-navigation-link">Portfolio</a>
+            </li>
+            <li class="mobile-menu-navigation-item">
+              <a href="#" class="mobile-menu-navigation-link">Contacts</a>
+            </li>
+          </ul>
+          <div class="mobile-menu-contacts-wrapper">
+            <ul class="mobile-menu-contact">
+              <li class="mobile-menu-contact-item">
+                <a href="tel:+110001111111" class="mobile-menu-contact-phone-link">+11 (000) 111-11-11</a>
+              </li>
+              <li class="mobile-menu-contact-item">
+                <a href="maito:info@devstudio.com" class="mobile-menu-contact-link">info@devstudio.com</a>
+              </li>
+            </ul>
+            <ul class="menu-burger-icons-list"><li class="menu-burger-icons-item"><a href="https://www.instagram.com/" class="menu-burger-icons-link"><svg class="menu-burger-icons-media"><use href="./images/symbol-defs.svg#icon-instagram"></svg></a></li>
+                <li class="menu-burger-icons-item"><a href="https://twitter.com/" class="menu-burger-icons-link"><svg class="menu-burger-icons-media"><use href="./images/symbol-defs.svg#icon-twitter"></svg></a></li>
+                <li class="menu-burger-icons-item"><a href="https://uk-ua.facebook.com/" class="menu-burger-icons-link"><svg class="menu-burger-icons-media"><use href="./images/symbol-defs.svg#icon-facebook"></svg></a></li>
+                <li class="menu-burger-icons-item"><a href="https://www.linkedin.com/" class="menu-burger-icons-link"><svg class="menu-burger-icons-media"><use href="./images/symbol-defs.svg#icon-linkedin"></svg></a></li>
+                </ul>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -106,16 +145,24 @@
         <div class="container job-container">
           <h2 class="job-heading">What are we doing</h2>
           <ul class="job-list">
-            <li><img src="./images/rec.jpg" alt="PC" class="job-photo" /></li>
             <li>
+              <picture><source srcset="./images/rec.jpg 1x, ./images/rec@2x.jpg 2x">
+                <img src="./images/rec.jpg" alt="PC" class="job-photo" /></picture></li>
+            <li>
+              <picture>
+                <source srcset="./images/img.jpg 1x, ./images/img@2x.jpg 2x">
               <img
                 src="./images/img.jpg"
                 alt="Social Media"
                 class="job-photo"
               />
+              </picture>
             </li>
             <li>
+              <picture>
+                <source srcset="./images/imgd.jpg 1x, ./images/imgd@2x.jpg 2x">
               <img src="./images/imgd.jpg" alt="Phone" class="job-photo" />
+              </picture>
             </li>
           </ul>
         </div>
@@ -125,7 +172,10 @@
           <h2 class="avatar-heading">Our Team</h2>
           <ul class="avatars-list">
             <li class="avatar-list-section">
+              <picture>
+                <source srcset="./images/imgmark.jpg 1x, ./images/imgmark@2x.jpg 2x">
               <img src="./images/imgmark.jpg" alt="Mark" class="avatar-card" />
+              </picture>
               <div class="avatar-item">
                 <h3 class="avatar-title">Mark Guerrero</h3>
                 <p class="avatar-text">Product Designer</p>
@@ -137,7 +187,10 @@
               </div>
             </li>
             <li class="avatar-list-section">
+              <picture>
+                <source srcset="./images/imgtom.jpg 1x, ./images/imgtom@2x.jpg 2x">
               <img src="./images/imgtom.jpg" alt="Tom" class="avatar-card" />
+              </picture>
               <div class="avatar-item">
                 <h3 class="avatar-title">Tom Ford</h3>
                 <p class="avatar-text">Frontend Developer</p>
@@ -149,11 +202,13 @@
               </div>
             </li>
             <li class="avatar-list-section">
-              <img
+              <picture>
+                <source srcset="./images/imgcamila.jpg 1x, ./images/imgcamila@2x.jpg 2x">
+                <img
                 src="./images/imgcamila.jpg"
                 alt="Camila"
                 class="avatar-card"
-              />
+              /></picture>
               <div class="avatar-item">
                 <h3 class="avatar-title">Camila Garcia</h3>
                 <p class="avatar-text">Marketing</p>
@@ -165,11 +220,14 @@
               </div>
             </li>
             <li class="avatar-list-section">
+              <picture>
+                <source srcset="./images/imgdaniel.jpg 1x, ./images/imgdaniel@2x.jpg">
               <img
                 src="./images/imgdaniel.jpg"
                 alt="Daniel"
                 class="avatar-card"
               />
+              </picture>
               <div class="avatar-item">
                 <h3 class="avatar-title">Daniel Wilson</h3>
                 <p class="avatar-text">UI Designer</p>
@@ -295,6 +353,7 @@
     </button>
     </div>
     </div>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
